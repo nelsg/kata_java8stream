@@ -1,25 +1,12 @@
 package java8_stream;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 
-public class Classement {
-	// Les candidats
-	private final List<Candidat> candidats = Arrays.asList(
-			new Candidat("Inès"),
-			new Candidat("Gabriel"),
-			new Candidat("Jade"),
-			new Candidat("Raphaël"),
-			new Candidat("Alice"),
-			new Candidat("Louise"));
-
-	// Les votes
-	private final String[] votes = new String[] {"Jade", "Jade", "Inès", "Alice", "Alice", "Louise", "Jade", "Raphaël", "Alice", "Gabriel", "Gabrielle", "Jade", "Louise", "Louise", "Alice", "Inès", "Gabriel", "Alice", "Jade", "Inès", "Alice", "Inès"};
-	
+public class Classement extends ClassementData {
 	/**
 	 * Retourner un candidat depuis son prénom, null si non trouvé
 	 */

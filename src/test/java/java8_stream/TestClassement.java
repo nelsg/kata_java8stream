@@ -42,7 +42,7 @@ public class TestClassement {
 	@Test
 	public void testListeCandidatsUpper() {
 		Classement classement = new Classement();
-		assertArrayEquals(new String[] {"ALICE", "GABRIEL", "INES", "JADE", "LOUISE", "RAPHAEL"}, classement.listeCandidatsUpper().toArray());
+		assertArrayEquals(new String[] {"ALICE", "GABRIEL", "INÈS", "JADE", "LOUISE", "RAPHAËL"}, classement.listeCandidatsUpper().toArray());
 	}
 
 	@Test

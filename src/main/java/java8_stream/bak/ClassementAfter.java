@@ -4,23 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import java8_stream.Candidat;
+import java8_stream.ClassementData;
 
 
-public class ClassementAfter {
-	// Les candidats
-	private final List<Candidat> candidats = Arrays.asList(
-			new Candidat("Inès"),
-			new Candidat("Gabriel"),
-			new Candidat("Jade"),
-			new Candidat("Raphaël"),
-			new Candidat("Alice"),
-			new Candidat("Louise"));
-
-	// Les votes
-	private final List<String> votes = Arrays.asList("Jade", "Jade", "Inès", "Alice", "Alice", "Louise", "Jade", "Raphaël", "Alice", "Gabriel", "Gabrielle", "Jade", "Louise", "Louise", "Alice", "Inès", "Gabriel", "Alice", "Jade", "Inès", "Alice", "Inès");
-	
+public class ClassementAfter extends ClassementData {
 	/**
 	 * Retourner un candidat depuis son prénom, null si non trouvé
 	 */
@@ -32,7 +22,7 @@ public class ClassementAfter {
 	 * distribution des votes sur les candidats
 	 */
 	public void appliquerVotes() {
-		votes.stream().map(x -> getCandidat(x)).filter(x -> x.isPresent()).forEach(x -> x.get().addVote());
+		Stream.of(votes).map(x -> getCandidat(x)).filter(x -> x.isPresent()).forEach(x -> x.get().addVote());
 	}
 	
 	/**
@@ -67,6 +57,6 @@ public class ClassementAfter {
 	 * Retourne le nombre de votes distribués
 	 */
 	public int votesNuls() {
-		return votes.size() - votesValides();
+		return votes.length - votesValides();
 	}
 }

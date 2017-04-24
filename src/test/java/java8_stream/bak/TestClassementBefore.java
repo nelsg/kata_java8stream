@@ -46,7 +46,7 @@ public class TestClassementBefore {
 	@Test
 	public void testListeCandidatsUpper() {
 		ClassementBefore classement = new ClassementBefore();
-		assertArrayEquals(new String[] {"ALICE", "GABRIEL", "INES", "JADE", "LOUISE", "RAPHAEL"}, classement.listeCandidatsUpper().toArray());
+		assertArrayEquals(new String[] {"ALICE", "GABRIEL", "INÈS", "JADE", "LOUISE", "RAPHAËL"}, classement.listeCandidatsUpper().toArray());
 	}
 
 	@Test
