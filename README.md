@@ -5,7 +5,9 @@ Quand on utilise les génériques, le compilateur se charge de déterminer le ty
 paramètre générique à l'aide du type de la variable d'affectation.
 Par exemple, il est possible de remplacer
 
+````java
     List<Candidat> resultat1 = new ArrayList<Candidat>();
+````
 
 Par
 
